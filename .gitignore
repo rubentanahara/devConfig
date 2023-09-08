@@ -1,0 +1,11 @@
+configstore/
+gh/
+iterm2/
+github-copilot/
+yarn/
+xbuild/
+znt/
+zsh/
+Microsoft VisualStudio Services/
+.DS_Store
+

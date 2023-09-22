@@ -27,8 +27,8 @@ local KeyMaps = {
 			["<C-s>"] = { ":w<CR>", "Save File" },
 			--Save and quit
 			["<C-q>"] = { ":wq<CR>", "Save and quit" },
-			--Select all
-			["<C-a>"] = { "ggVG", "Select all" },
+			-- Select all
+			-- ["<C-a>"] = { "ggVG", "Select all" },
 			--clear search highlight
 			["<C-l>"] = { ":noh<CR>", "Clear search highlight" },
 			-- delete single character without copying into register
@@ -69,8 +69,6 @@ local KeyMaps = {
 			["<leader>bp"] = { ":bp<CR>", "Previous Buffer" },
 			["<leader>bn"] = { ":bn<CR>", "Next Buffer" },
 			["<leader>bd"] = { ":bd<CR>", "Delete Buffer" },
-			--show Cheatsheet
-			["<leader>ch"] = { ":NvCheatsheet<CR>", "Show Cheatsheet" },
 		},
 	},
 }

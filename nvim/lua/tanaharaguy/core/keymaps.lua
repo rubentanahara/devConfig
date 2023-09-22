@@ -88,15 +88,15 @@ end
 setKeymaps()
 
 -- Window navigation
-vim.api.nvim_set_keymap("", "sh", "<C-w>h", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("", "sk", "<C-w>k", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("", "sj", "<C-w>j", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("", "sl", "<C-w>l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("", "wh", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("", "wk", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("", "wj", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("", "wl", "<C-w>l", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("t", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ti", ":FloatermNew<CR>")
 vim.keymap.set("t", "<leader>tp", "<C-\\><C-n>|:FloatermPrev<CR>")
 vim.keymap.set("t", "<leader>tn", "<C-\\><C-n>|:FloatermNext<CR>")
 
 vim.keymap.set("n", "<leader>tg", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 lazygit<CR>")
+vim.keymap.set("n", "<leader>ti", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 <CR>")

@@ -94,6 +94,7 @@ vim.api.nvim_set_keymap("", "sj", "<C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("", "sl", "<C-w>l", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("t", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>ti", ":FloatermNew<CR>")
 vim.keymap.set("t", "<leader>tp", "<C-\\><C-n>|:FloatermPrev<CR>")
 vim.keymap.set("t", "<leader>tn", "<C-\\><C-n>|:FloatermNext<CR>")

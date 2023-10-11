@@ -20,9 +20,9 @@ opt.expandtab = true -- use spaces instead of tabs
 opt.smarttab = true -- use shiftwidth when inserting tab
 
 -- indentation
-opt.tabstop = 2 -- tab width
-opt.softtabstop = 2 -- tab width when editing
-opt.shiftwidth = 2 -- indent width
+opt.tabstop = 4 -- tab width
+opt.softtabstop = 4 -- tab width when editing
+opt.shiftwidth = 4 -- indent width
 opt.smartindent = true -- autoindent new lines
 opt.autoindent = true -- autoindent new lines\
 opt.breakindent = true -- indent wrapped lines
@@ -81,7 +81,7 @@ opt.shell = "zsh" -- use zsh as shell
 opt.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
 opt.updatetime = 250 -- time to wait for a mapped sequence to complete (in milliseconds)
 
-opt.formatoptions:append({ "r" }) -- don't automatically insert comment leader after hitting <Enter> in insert mode
+-- opt.formatoptins:append({ "r" }) -- don't automatically insert comment leader after hitting <Enter> in insert mode
 
 opt.whichwrap:append("<>[]hl") -- move to next line with these keys
 

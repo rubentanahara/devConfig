@@ -34,7 +34,7 @@ opt.fillchars = { eob = " " } -- fill end of buffer with spaces
 opt.mouse = "a" -- enable mouse
 
 -- line wrapping
-opt.wrap = false -- don't wrap lines
+opt.wrap = true -- don't wrap lines
 
 -- search
 -- search options
@@ -47,7 +47,7 @@ opt.hlsearch = true -- highlight search matches
 opt.cmdheight = 1 -- more space for displaying messages
 opt.showmode = true -- show current mode
 opt.showcmd = true -- show current command
-opt.laststatus = 2 -- always show status line
+opt.laststatus = 3 -- always show status line
 opt.termguicolors = true -- enable 24-bit RGB colors
 opt.background = "" -- dark background
 opt.scrolloff = 10 -- minimum lines to keep above and below cursor
@@ -90,4 +90,4 @@ vim.cmd([[let &t_Cs = "\e[4:3m"]]) -- start undercurl
 vim.cmd([[let &t_Ce = "\e[4:0m"]]) -- end undercurl
 
 -- turn off paste mode when leaving insert mode
-vim.cmd([[autocmd InsertLeave * set nopaste]])
+-- vim.cmd([[autocmd InsertLeave * set nopaste]])

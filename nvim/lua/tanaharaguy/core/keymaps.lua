@@ -97,6 +97,7 @@ vim.api.nvim_set_keymap("t", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", {
 vim.api.nvim_set_keymap("n", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<leader>tp", "<C-\\><C-n>|:FloatermPrev<CR>")
 vim.keymap.set("t", "<leader>tn", "<C-\\><C-n>|:FloatermNext<CR>")
-
+-- gh extension install dlvhdr/gh-dash
+vim.keymap.set("n", "<leader>tg", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 gh dash<CR>")
 vim.keymap.set("n", "<leader>tg", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 lazygit<CR>")
 vim.keymap.set("n", "<leader>ti", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 <CR>")

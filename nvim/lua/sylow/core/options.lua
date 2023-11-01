@@ -69,7 +69,7 @@ opt.backspace = { "indent", "eol", "start" } -- backspace through everything
 -- backup
 opt.backup = false -- don't backup files
 opt.backupskip = { "/tmp/*", "/private/tmp/*" } -- don't backup files
---opt.swapfile = false -- don't use swap files
+opt.swapfile = false -- don't use swap files
 
 -- undo
 opt.undofile = true -- enable undo files

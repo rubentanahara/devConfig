@@ -1,5 +1,2 @@
-require("tanaharaguy.core")
-require("tanaharaguy.lazy")
-
-
+require('sylow.core')
 

@@ -5,9 +5,9 @@ local g = vim.g -- for concise set global variables
 g.mapleader = " " -- set leader key to space
 
 -- encoding
-vim.scriptencoding = "utf-8"
-opt.fileencoding = "utf-8"
-opt.encoding = "utf-8"
+-- vim.scriptencoding = "utf-8"
+-- opt.fileencoding = "utf-8"
+-- opt.encoding = "utf-8"
 
 -- numbers
 opt.relativenumber = true -- relative line numbers
@@ -20,9 +20,9 @@ opt.expandtab = true -- use spaces instead of tabs
 opt.smarttab = true -- use shiftwidth when inserting tab
 
 -- indentation
-opt.tabstop = 4 -- tab width
-opt.softtabstop = 4 -- tab width when editing
-opt.shiftwidth = 4 -- indent width
+opt.tabstop = 2 -- tab width
+opt.softtabstop = 2 -- tab width when editing
+opt.shiftwidth = 2 -- indent width
 opt.smartindent = true -- autoindent new lines
 opt.autoindent = true -- autoindent new lines\
 opt.breakindent = true -- indent wrapped lines
@@ -34,10 +34,9 @@ opt.fillchars = { eob = " " } -- fill end of buffer with spaces
 opt.mouse = "a" -- enable mouse
 
 -- line wrapping
-opt.wrap = true -- don't wrap lines
+opt.wrap = true --wrap lines
 
 -- search
--- search options
 opt.ignorecase = true -- ignore case
 opt.smartcase = true -- ignore case unless there is a capital letter
 opt.incsearch = true -- show search matches as you type
@@ -77,17 +76,4 @@ opt.undofile = true -- enable undo files
 -- shell
 opt.shell = "zsh" -- use zsh as shell
 
--- timeout
-opt.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
-opt.updatetime = 250 -- time to wait for a mapped sequence to complete (in milliseconds)
-
--- opt.formatoptins:append({ "r" }) -- don't automatically insert comment leader after hitting <Enter> in insert mode
-
 opt.whichwrap:append("<>[]hl") -- move to next line with these keys
-
---undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]]) -- start undercurl
-vim.cmd([[let &t_Ce = "\e[4:0m"]]) -- end undercurl
-
--- turn off paste mode when leaving insert mode
--- vim.cmd([[autocmd InsertLeave * set nopaste]])

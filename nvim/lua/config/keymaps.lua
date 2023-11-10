@@ -13,7 +13,6 @@ vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = 
 -- NORMAL
 vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true, desc = "Save File" })
 vim.keymap.set("n", "<C-q>", ":wq<CR>", { noremap = true, silent = true, desc = "Save and quit" })
-vim.keymap.set("n", "<C-Q>", ":wa<CR>", { noremap = true, silent = true, desc = "Quit all" })
 vim.keymap.set(
   "n",
   "x",
@@ -45,7 +44,3 @@ vim.keymap.set("t", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap 
 vim.keymap.set("n", "<leader>tre", "<C-\\><C-n>|:FloatermToggle<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<leader>tp", "<C-\\><C-n>|:FloatermPrev<CR>")
 vim.keymap.set("t", "<leader>tn", "<C-\\><C-n>|:FloatermNext<CR>")
--- gh extension install dlvhdr/gh-dash
-vim.keymap.set("n", "<leader>tgd", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 gh dash<CR>")
-vim.keymap.set("n", "<leader>tg", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 lazygit<CR>")
-vim.keymap.set("n", "<leader>ti", ":FloatermNew --autohide=1 --height=0.7 --width=0.7 --autoclose=2 <CR>")

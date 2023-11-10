@@ -46,10 +46,16 @@ defaults:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
-keybindings:
-  issues: []
-  prs: []
-repoPaths: {}
+  keybindings:
+    issues: []
+  prs:
+  - key: e
+    command: >
+        cd {{.RepoPath}} &&
+        gh pr edit {{.PrNumber}}
+  - key: n
+    command: >
+        gh pr create -B devrepoPaths: {}
 theme:
   ui:
     table:

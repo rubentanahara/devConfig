@@ -13,6 +13,7 @@ vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = 
 -- NORMAL
 vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true, desc = "Save File" })
 vim.keymap.set("n", "<C-q>", ":wq<CR>", { noremap = true, silent = true, desc = "Save and quit" })
+vim.keymap.set("n", "<C-Q>", ":wa<CR>", { noremap = true, silent = true, desc = "Quit all" })
 vim.keymap.set(
   "n",
   "x",

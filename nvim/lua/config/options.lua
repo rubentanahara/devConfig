@@ -3,7 +3,7 @@
 local opt = vim.opt -- for concise set options
 local g = vim.g -- for concise set global variables
 g.mapleader = " " -- set leader key to space
-g.autoformat = false
+-- g.autoformat = false
 -- encoding
 -- vim.scriptencoding = "utf-8"
 -- opt.fileencoding = "utf-8"

@@ -5,9 +5,9 @@ local g = vim.g -- for concise set global variables
 g.mapleader = " " -- set leader key to space
 g.autoformat = false
 -- encoding
--- vim.scriptencoding = "utf-8"
--- opt.fileencoding = "utf-8"
--- opt.encoding = "utf-8"
+vim.scriptencoding = "utf-8"
+opt.fileencoding = "utf-8"
+opt.encoding = "utf-8"
 
 -- numbers
 opt.relativenumber = true -- relative line numbers

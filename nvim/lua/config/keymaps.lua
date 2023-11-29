@@ -3,10 +3,10 @@
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "Exit edit mode" })
 vim.keymap.set("i", "<C-b>", "<ESC>^i", { noremap = true, silent = true, desc = "Beggining of line" })
 vim.keymap.set("i", "<C-e>", "<ESC>$a", { noremap = true, silent = true, desc = "End of line" })
-vim.keymap.set("i", "<w-h>", "<Left>", { noremap = true, silent = true, desc = "Move Left" })
-vim.keymap.set("i", "<w-k>", "<Up>", { noremap = true, silent = true, desc = "Move Up" })
-vim.keymap.set("i", "<w-j>", "<Down>", { noremap = true, silent = true, desc = "Move Down" })
-vim.keymap.set("i", "<w-l>", "<Right>", { noremap = true, silent = true, desc = "Move Right" })
+vim.keymap.set("i", "<C-w>l", "<Left>", { noremap = true, silent = true, desc = "Move Left" })
+vim.keymap.set("i", "<C-w>k", "<Up>", { noremap = true, silent = true, desc = "Move Up" })
+vim.keymap.set("i", "<C-w>j", "<Down>", { noremap = true, silent = true, desc = "Move Down" })
+vim.keymap.set("i", "<C-w>h", "<Right>", { noremap = true, silent = true, desc = "Move Right" })
 
 -- NORMAL
 vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", { noremap = true, silent = true, desc = "Move line down" })

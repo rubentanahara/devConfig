@@ -41,6 +41,13 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
+  "n",
+  "<leader>z",
+  "<C-\\><C-n>|:DogeGenerate<CR>",
+  { noremap = true, silent = true, desc = "Generate docs" }
+)
+
+vim.keymap.set(
   "t",
   "<leader>tre",
   "<C-\\><C-n>|:FloatermToggle<CR>",

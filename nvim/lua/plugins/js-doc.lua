@@ -1,7 +1,4 @@
 return {
-  "danymat/neogen",
-  dependencies = "nvim-treesitter/nvim-treesitter",
-  config = true,
-  -- Uncomment next line if you want to follow only stable versions
-  version = "*",
+  "kkoomen/vim-doge",
+  run = ":call doge#install()",
 }

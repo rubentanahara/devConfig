@@ -48,22 +48,23 @@ opt.showmode = true -- show current mode
 opt.showcmd = true -- show current command
 opt.laststatus = 3 -- always show status line
 opt.termguicolors = true -- enable 24-bit RGB colors
-opt.background = "" -- dark background
+opt.background = "dark" -- dark background
 opt.scrolloff = 10 -- minimum lines to keep above and below cursor
+opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- split
 opt.splitbelow = true -- split below instead of above
 opt.splitright = true -- split right instead of left
 
 -- turn off swapfiles
--- opt.swapfile = false -- don't use swap files
+opt.swapfile = false -- don't use swap files
 
 -- clipboard
 opt.clipboard = "unnamedplus" -- use system clipboard
 opt.cursorline = false -- highlight current line
 
 -- backspace
-opt.backspace = { "indent", "eol", "start" } -- backspace through everything
+opt.backspace = "indent,eol,start" -- backspace through everything
 
 -- backup
 opt.backup = false -- don't backup files

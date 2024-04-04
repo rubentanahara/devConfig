@@ -86,6 +86,13 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Move lines up in visual mode" }
 )
 
+vim.keymap.set(
+  "n",
+  "<leader>gb",
+  ":Gitsigns blame_line<CR>",
+  { noremap = true, silent = true, desc = "Quemador de gente" }
+)
+
 local function wrapInConsoleLog()
   local mode = vim.api.nvim_get_mode().mode
   local text

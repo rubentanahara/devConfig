@@ -85,3 +85,24 @@ vim.keymap.set(
   ":move '<-2<CR>gv-gv",
   { noremap = true, silent = true, desc = "Move lines up in visual mode" }
 )
+
+local function wrapInConsoleLog()
+  local mode = vim.api.nvim_get_mode().mode
+  local text
+
+  if mode == "n" then
+    text = vim.api.nvim_get_current_line()
+    local logStatement = "console.log(" .. text:gsub("%s+", "") .. ");"
+    local lineNumber = vim.api.nvim_win_get_cursor(0)[1] -- Get the current line number
+    vim.api.nvim_buf_set_lines(0, lineNumber - 1, lineNumber, false, { logStatement })
+  else
+    return
+  end
+end
+
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>cz",
+  wrapInConsoleLog,
+  { noremap = true, silent = true, desc = "Wrap in console.log" }
+)

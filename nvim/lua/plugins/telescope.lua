@@ -21,9 +21,9 @@
 --   },
 -- }
 return {
-  "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
+  "telescope.nvim",
   dependencies = {
+    "nvim-telescope/telescope-file-browser.nvim",
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
@@ -31,15 +31,40 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
+    local fb_actions = require("telescope").extensions.file_browser.actions
 
     telescope.setup({
       defaults = {
         path_display = { "smart" },
+        layout_config = { prompt_position = "top" },
+        hijack_netrw = true,
+        file_ignore_patterns = { ".git/", "node_modules/" },
+        theme = "dropdown",
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next, -- move to next result
             -- ["<C-e>"] = actions.send_selected_to_qflist + actions.open_qflist,
+          },
+          n = {
+            -- your custom normal mode mappings
+            ["N"] = fb_actions.create,
+            ["h"] = fb_actions.goto_parent_dir,
+            ["/"] = function()
+              vim.cmd("startinsert")
+            end,
+            ["<C-u>"] = function(prompt_bufnr)
+              for i = 1, 10 do
+                actions.move_selection_previous(prompt_bufnr)
+              end
+            end,
+            ["<C-d>"] = function(prompt_bufnr)
+              for i = 1, 10 do
+                actions.move_selection_next(prompt_bufnr)
+              end
+            end,
+            ["<PageUp>"] = actions.preview_scrolling_up,
+            ["<PageDown>"] = actions.preview_scrolling_down,
           },
         },
       },

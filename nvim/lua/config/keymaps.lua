@@ -72,10 +72,10 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Next terminal" }
 )
 
-vim.keymap.set("n", "sh", "<C-w>h")
-vim.keymap.set("n", "sk", "<C-w>k")
-vim.keymap.set("n", "sj", "<C-w>j")
-vim.keymap.set("n", "sl", "<C-w>l")
+vim.keymap.set("n", "wh", "<C-w>h")
+vim.keymap.set("n", "wk", "<C-w>k")
+vim.keymap.set("n", "wj", "<C-w>j")
+vim.keymap.set("n", "wl", "<C-w>l")
 
 --VISUAL
 vim.keymap.set(

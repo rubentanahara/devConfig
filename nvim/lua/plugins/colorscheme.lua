@@ -1,3 +1,15 @@
+return {
+  { "ellisonleao/gruvbox.nvim" },
+
+  -- Configure LazyVim to load gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
+}
+
 -- return {
 --   -- add gruvbox
 --   { "rebelot/kanagawa.nvim" },
@@ -17,17 +29,17 @@
 --   -- vim.cmd("colorscheme kanagawa"),
 -- }
 
-return {
-  {
-    "bluz71/vim-nightfly-guicolors",
-    priority = 1000,
-    config = function()
-      --load the colorscheme
-      vim.g.nightflyTransparent = 3
-      vim.cmd([[colorscheme nightfly]])
-    end,
-  },
-}
+-- return {
+--   {
+--     "bluz71/vim-nightfly-guicolors",
+--     priority = 1000,
+--     config = function()
+--       --load the colorscheme
+--       vim.g.nightflyTransparent = 3
+--       vim.cmd([[colorscheme nightfly]])
+--     end,
+--   },
+-- }
 --
 -- return {
 --   {
@@ -42,7 +54,7 @@ return {
 --       local fg = "#CBE0F0"
 --       local fg_dark = "#B4D0E9"
 --       local fg_gutter = "#627E97"
---       local border = "#547998"
+--      local border = "#547998"
 --
 --       require("tokyonight").setup({
 --         style = "night",

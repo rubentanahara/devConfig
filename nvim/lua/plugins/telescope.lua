@@ -36,7 +36,9 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "smart" },
-        layout_config = { prompt_position = "top" },
+        layout_config = { prompt_position = "bottom" },
+        sorting_strategy = "ascending",
+        winblend = 0,
         hijack_netrw = true,
         file_ignore_patterns = { ".git/", "node_modules/" },
         theme = "dropdown",
@@ -44,7 +46,7 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next, -- move to next result
-            -- ["<C-e>"] = actions.send_selected_to_qflist + actions.open_qflist,
+            ["<C-e>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
           n = {
             -- your custom normal mode mappings

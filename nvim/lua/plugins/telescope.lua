@@ -1,8 +1,7 @@
 return {
-  "telescope.nvim",
+  "nvim-telescope/telescope.nvim",
   dependencies = {
     "nvim-telescope/telescope-file-browser.nvim",
-    "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
   },
@@ -13,21 +12,19 @@ return {
 
     telescope.setup({
       defaults = {
+        layout_strategy = "flex",
         path_display = { "smart" },
-        layout_config = { prompt_position = "bottom" },
+        layout_config = { prompt_position = "top" }, -- moved theme to layout_strategy
         sorting_strategy = "ascending",
         winblend = 0,
-        hijack_netrw = true,
-        file_ignore_patterns = { ".git/", "node_modules/" },
-        theme = "dropdown",
+        file_ignore_patterns = { "%.git/", "node_modules/" }, -- escaped . character
         mappings = {
           i = {
-            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next, -- move to next result
+            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
             ["<C-e>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
           n = {
-            -- your custom normal mode mappings
             ["N"] = fb_actions.create,
             ["h"] = fb_actions.goto_parent_dir,
             ["/"] = function()
@@ -51,6 +48,8 @@ return {
     })
 
     telescope.load_extension("fzf")
+    telescope.load_extension("file_browser")
+    telescope.load_extension("rest")
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness

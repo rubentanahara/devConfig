@@ -118,3 +118,85 @@ vim.keymap.set(
   wrapInConsoleLog,
   { noremap = true, silent = true, desc = "Wrap in console.log" }
 )
+
+-- Key mappings for neotest
+-- Run the nearest test
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>tn",
+  ":lua require('neotest').run.run()<CR>",
+  { noremap = true, silent = true, desc = "Run nearest test" }
+)
+
+-- Run all tests in the current file
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>tf",
+  ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
+  { noremap = true, silent = true, desc = "Run all tests in current file" }
+)
+
+-- Toggle the test summary window
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ts",
+  ":lua require('neotest').summary.toggle()<CR>",
+  { noremap = true, silent = true, desc = "Toggle test summary window" }
+)
+
+-- Open the output of the last test run
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>to",
+  ":lua require('neotest').output.open({ enter = true })<CR>",
+  { noremap = true, silent = true, desc = "Open test output window" }
+)
+
+-- Key mappings for debugging with nvim-dap
+-- Toggle a breakpoint at the current line
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>db",
+  ":lua require('dap').toggle_breakpoint()<CR>",
+  { noremap = true, silent = true, desc = "Toggle breakpoint" }
+)
+
+-- Continue execution until the next breakpoint
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>dc",
+  ":lua require('dap').continue()<CR>",
+  { noremap = true, silent = true, desc = "Continue execution" }
+)
+
+-- Step into the function under the cursor
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>di",
+  ":lua require('dap').step_into()<CR>",
+  { noremap = true, silent = true, desc = "Step into function" }
+)
+
+-- Step over the function under the cursor
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>do",
+  ":lua require('dap').step_over()<CR>",
+  { noremap = true, silent = true, desc = "Step over function" }
+)
+
+-- Step out of the current function
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>du",
+  ":lua require('dap').step_out()<CR>",
+  { noremap = true, silent = true, desc = "Step out of function" }
+)
+
+-- Open the REPL for nvim-dap
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>dr",
+  ":lua require('dap').repl.open()<CR>",
+  { noremap = true, silent = true, desc = "Open REPL" }
+)

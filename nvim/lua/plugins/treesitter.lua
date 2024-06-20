@@ -10,7 +10,7 @@ return {
     local treesitter = require("nvim-treesitter.configs")
 
     -- configure treesitter
-    treesitter.setup({ -- enable syntax highlighting
+    treesitter.setup({
       highlight = {
         enable = true,
       },
@@ -42,6 +42,9 @@ return {
         "query",
         "vimdoc",
         "c",
+        "xml",
+        "http",
+        "graphql",
       },
       incremental_selection = {
         enable = true,
